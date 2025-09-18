@@ -15,6 +15,8 @@ app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/events", eventRoutes);
 
+app.get("/api/health", (_req,res)=>res.json({status:"ok"}));
+
 app.use(errorHandler);
 
 export default app;
